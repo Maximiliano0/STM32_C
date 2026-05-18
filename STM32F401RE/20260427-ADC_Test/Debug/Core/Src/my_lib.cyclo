@@ -1,0 +1,8 @@
+../Core/Src/my_lib.c:15:9:Hw_Init	1
+../Core/Src/my_lib.c:40:6:SystemClock_Config	1
+../Core/Src/my_lib.c:74:6:GPIO_Config	1
+../Core/Src/my_lib.c:138:6:TIM3_Config	1
+../Core/Src/my_lib.c:171:6:TIM2_Config	1
+../Core/Src/my_lib.c:216:14:CLICK_Detect	9
+../Core/Src/my_lib.c:253:6:ADC_Config	1
+../Core/Src/my_lib.c:281:6:TIM3_IRQHandler	2

@@ -1,0 +1,6 @@
+../Src/my_lib.c:14:9:Hw_Init	8	static
+../Src/my_lib.c:36:6:SystemClock_Config	64	static
+../Src/my_lib.c:70:6:GPIO_Config	32	static
+../Src/my_lib.c:94:6:TIM3_Config	48	static
+../Src/my_lib.c:131:6:TIM1_Config	136	static
+../Src/my_lib.c:200:6:TIM3_IRQHandler	8	static

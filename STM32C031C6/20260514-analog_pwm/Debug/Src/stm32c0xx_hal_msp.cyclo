@@ -1,0 +1,4 @@
+../Src/stm32c0xx_hal_msp.c:64:6:HAL_MspInit	1
+../Src/stm32c0xx_hal_msp.c:87:6:HAL_TIM_Base_MspInit	3
+../Src/stm32c0xx_hal_msp.c:117:6:HAL_TIM_MspPostInit	2
+../Src/stm32c0xx_hal_msp.c:143:6:HAL_TIM_Base_MspDeInit	3

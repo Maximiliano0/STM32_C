@@ -1,0 +1,4 @@
+C:/Users/maxvega/Documents/Micros/20260309/build/CMakeFiles/non_recursive.dir
+C:/Users/maxvega/Documents/Micros/20260309/build/CMakeFiles/recursive.dir
+C:/Users/maxvega/Documents/Micros/20260309/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/maxvega/Documents/Micros/20260309/build/CMakeFiles/ZERO_CHECK.dir

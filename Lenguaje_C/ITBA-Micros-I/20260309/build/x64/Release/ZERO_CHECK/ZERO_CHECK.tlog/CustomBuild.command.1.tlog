@@ -1,0 +1,10 @@
+^C:\USERS\MAXVEGA\DOCUMENTS\MICROS\20260309\BUILD\CMAKEFILES\8A7C8ABDA83B3D2B4BF4D4043B784473\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxvega/Documents/Micros/20260309 -BC:/Users/maxvega/Documents/Micros/20260309/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/maxvega/Documents/Micros/20260309/build/Recursividad.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^C:\USERS\MAXVEGA\DOCUMENTS\MICROS\20260311\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/maxvega/Documents/Micros/20260311 -BC:/Users/maxvega/Documents/Micros/20260311/build --check-stamp-file C:/Users/maxvega/Documents/Micros/20260311/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
