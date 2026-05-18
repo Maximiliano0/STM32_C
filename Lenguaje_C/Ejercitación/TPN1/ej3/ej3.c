@@ -1,7 +1,7 @@
 /************************************************************************************************
  * Ejercicio 3 - 2025                                                                           *
  * Escriba un programa el cual valide el nombre de usuario y la password del mismo solicitadas  *
- * por pantalla con user: Micros&Control y password: 22.57.                                     *
+ * por pantalla con user: admin y password: 1234.                                               *
  ************************************************************************************************/
 
 // Librerías
@@ -19,8 +19,8 @@
 // Prototipo de Funciones
 
 // Variables Globales
-const char _User_OK[] = "Micros&Control";
-const char _Password_OK[] = "22.57";
+const char _User_OK[] = "admin";
+const char _Password_OK[] = "1234";
 
 // Función principal
 int main (void){

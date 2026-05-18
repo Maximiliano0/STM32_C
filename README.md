@@ -6,21 +6,21 @@ Reúne ejercicios de C bare metal, proyectos STM32 (HAL, CubeIDE) sobre dos plat
 
 ---
 
-## Cursos
+## Plataformas
 
-| Curso                                | Universidad | Plataforma            |
-|--------------------------------------|-------------|-----------------------|
-| Microprocesadores y Control (22.57)  | ITBA        | STM32 Nucleo-F401RE   |
-| Microcontroladores II                | UCA         | STM32 Nucleo-C031C6   |
+| Curso                   | Plataforma            | Núcleo                       |
+|-------------------------|-----------------------|------------------------------|
+| Microcontroladores I    | STM32 Nucleo-F401RE   | Cortex-M4F @ 84 MHz          |
+| Microcontroladores II   | STM32 Nucleo-C031C6   | Cortex-M0+  @ 48 MHz         |
 
 ---
 
 ## Estructura del repositorio
 
-```
+```text
 STM32_C/
 ├── Lenguaje_C/                Fundamentos y prácticas en C estándar
-│   ├── ITBA-Micros-I/         Clases ITBA + TPN1 (10 ejercicios)
+│   ├── Ejercitación/          Clases + TPN1 (10 ejercicios)
 │   │   ├── 01_hello_io/
 │   │   ├── 02_libs_printf/
 │   │   ├── 03_recursion_strings/
@@ -31,10 +31,10 @@ STM32_C/
 │   │   ├── 08_vpointer/
 │   │   ├── 09_state_machines/
 │   │   └── TPN1/
-│   └── UCA-Micros-II/
+│   └── Maquinas de Estado/
 │       └── state_machines/    switch-case vs table-driven
 │
-├── STM32F401RE/               Proyectos CubeIDE para Nucleo-F401RE (ITBA)
+├── STM32F401RE/               Proyectos CubeIDE para Nucleo-F401RE
 │   ├── button_led/
 │   ├── Blinky_CleanCode/
 │   ├── Button_PWM/
@@ -45,7 +45,7 @@ STM32_C/
 │   ├── USART_Polling/
 │   └── USART_RxIT/
 │
-├── STM32C031C6/               Proyectos CubeIDE para Nucleo-C031C6 (UCA)
+├── STM32C031C6/               Proyectos CubeIDE para Nucleo-C031C6
 │   ├── first_program/
 │   ├── tim_pwm_project/
 │   ├── tim_debounce/
@@ -58,11 +58,10 @@ STM32_C/
 │   ├── FIR_IIR/               Filtros FIR e IIR
 │   └── Windowing/             Hamming, Hanning, Blackman, Bartlett, …
 │
-├── doc/                       Presentaciones de soporte
+├── extra/                     Presentaciones de soporte
 │   ├── Comunicación Serie.pptx
 │   └── Maquinas de Estado.pptx
 │
-├── ABOUT.md
 └── README.md
 ```
 
@@ -79,11 +78,11 @@ STM32_C/
 - Modularización: librerías (`my_lib`, `lib1`, `lib2`)
 - Tabla de saltos / punteros virtuales (`vpointer`)
 - Máquinas de estado: `switch-case` vs `table-driven`
-- **TPN1**: 10 ejercicios integradores (`Lenguaje_C/ITBA-Micros-I/TPN1`)
+- **TPN1**: 10 ejercicios integradores (`Lenguaje_C/Ejercitación/TPN1`)
 
 ---
 
-## STM32F401RE (ITBA) — proyectos
+## STM32F401RE — proyectos
 
 Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-F401RE** (Cortex-M4F @ 84 MHz).
 
@@ -91,7 +90,7 @@ Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-F401RE*
 |-----------------------|-------------------------------------------------|
 | `button_led`          | GPIO básico: lectura de pulsador y LED          |
 | `Blinky_CleanCode`    | Blinky aplicando *clean code*                   |
-| `Button_PWM`          | PWM controlado por pulsador                    |
+| `Button_PWM`          | PWM controlado por pulsador                     |
 | `DeBounce`            | Antirrebote por software                        |
 | `ADC_Test`            | Lectura analógica con ADC                       |
 | `FIR`                 | Filtro FIR sobre muestras del ADC               |
@@ -101,7 +100,7 @@ Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-F401RE*
 
 ---
 
-## STM32C031C6 (UCA) — proyectos
+## STM32C031C6 — proyectos
 
 Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-C031C6** (Cortex-M0+ @ 48 MHz).
 
@@ -138,7 +137,7 @@ Requisitos típicos: `numpy`, `matplotlib`, `scipy`.
 
 ---
 
-## Material de soporte (`doc/`)
+## Material de soporte (`extra/`)
 
 - `Comunicación Serie.pptx` — fundamentos de UART/USART y ejemplos.
 - `Maquinas de Estado.pptx` — `switch-case` vs *table-driven*.
@@ -148,5 +147,5 @@ Requisitos típicos: `numpy`, `matplotlib`, `scipy`.
 ## Autor
 
 **Ing. Maximiliano Vega**
-Docente de Microcontroladores — ITBA · UCA
+Docente de Microcontroladores
 GitHub: [@Maximiliano0](https://github.com/Maximiliano0)

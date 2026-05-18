@@ -61,7 +61,7 @@ main-build: analog_pwm.elf secondary-outputs
 
 # Tool invocations
 analog_pwm.elf analog_pwm.map: $(OBJS) $(USER_OBJS) C:\Users\maxvega\Documents\Micros\ II\20260514\analog_pwm\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "analog_pwm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\Micros II\20260514\analog_pwm\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="analog_pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "analog_pwm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\STM32_Projects\analog_pwm\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="analog_pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

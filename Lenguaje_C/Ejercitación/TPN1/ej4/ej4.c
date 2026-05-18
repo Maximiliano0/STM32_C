@@ -6,7 +6,7 @@
  * datos externa.                                                                               *
  * Como ejemplo se puede usar la siguiente "base de datos":                                     *
  * const user_t db[_MaxDB] = {                                                                  *
- *                     {"Micros&Control", "22.57"},                                             *
+ *                     {"admin", "1234"},                                                       *
  *                     {"Douglas Adams", "42"},                                                 *
  *                     {"Jorge Luis Borges", "Aleph"},                                          *
  *                     {"Ursula K Leguin", "Terramar"}                                          *
@@ -34,7 +34,7 @@ typedef struct{
 
 // Variables Globales
 const user_t db[_MaxDB] = {
-                      {"Micros&Control", "22.57"},
+                      {"admin", "1234"},
                       {"Douglas Adams", "42"},
                       {"Jorge Luis Borges", "Aleph"},
                       {"Ursula K Leguin", "Terramar"}

@@ -61,7 +61,7 @@ main-build: first_program.elf secondary-outputs
 
 # Tool invocations
 first_program.elf first_program.map: $(OBJS) $(USER_OBJS) C:\Users\maxvega\Documents\Micros\ II\20260409\first_program\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "first_program.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\Micros II\20260409\first_program\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first_program.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "first_program.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\STM32_Projects\first_program\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="first_program.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

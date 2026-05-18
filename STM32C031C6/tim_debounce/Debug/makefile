@@ -61,7 +61,7 @@ main-build: tim_click.elf secondary-outputs
 
 # Tool invocations
 tim_click.elf tim_click.map: $(OBJS) $(USER_OBJS) C:\Users\maxvega\Documents\Micros\ II\20260429\tim_debounce\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "tim_click.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\Micros II\20260429\tim_debounce\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tim_click.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "tim_click.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\STM32_Projects\tim_debounce\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tim_click.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

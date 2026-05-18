@@ -60,8 +60,8 @@ all: main-build
 main-build: tim_pwm_project.elf secondary-outputs
 
 # Tool invocations
-tim_pwm_project.elf tim_pwm_project.map: $(OBJS) $(USER_OBJS) C:\Users\UCA\Documents\tim_pwm_project\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "tim_pwm_project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\UCA\Documents\tim_pwm_project\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tim_pwm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+tim_pwm_project.elf tim_pwm_project.map: $(OBJS) $(USER_OBJS) C:\Users\dev\Documents\tim_pwm_project\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "tim_pwm_project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\dev\Documents\tim_pwm_project\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tim_pwm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

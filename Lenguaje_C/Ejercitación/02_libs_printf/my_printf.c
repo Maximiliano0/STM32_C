@@ -7,7 +7,7 @@
 #define buffer_length ((uint8_t) 10) // Tamaño del buffer
 
 int main (void){
-    char my_string[buffer_length]="ITBA"; // Local al main
+    char my_string[buffer_length]="Hola"; // Local al main
     int index; 
 
     // Imprimir buffer completo

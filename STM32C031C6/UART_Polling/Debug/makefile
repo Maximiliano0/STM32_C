@@ -61,7 +61,7 @@ main-build: UART_Polling.elf secondary-outputs
 
 # Tool invocations
 UART_Polling.elf UART_Polling.map: $(OBJS) $(USER_OBJS) C:\Users\maxvega\Documents\Micros\ II\20260507\UART_Polling\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "UART_Polling.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\Micros II\20260507\UART_Polling\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "UART_Polling.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\maxvega\Documents\STM32_Projects\UART_Polling\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
