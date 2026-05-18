@@ -19,24 +19,52 @@ Reúne ejercicios de C bare metal, proyectos STM32 (HAL, CubeIDE) sobre dos plat
 
 ```
 STM32_C/
-├── Lenguaje_C/         Fundamentos y prácticas en C estándar
-│   ├── ITBA-Micros-I/  Clases ITBA + TPN1 (10 ejercicios)
-│   └── UCA-Micros-II/  Máquinas de estado (switch-case y table-driven)
+├── Lenguaje_C/                Fundamentos y prácticas en C estándar
+│   ├── ITBA-Micros-I/         Clases ITBA + TPN1 (10 ejercicios)
+│   │   ├── 01_hello_io/
+│   │   ├── 02_libs_printf/
+│   │   ├── 03_recursion_strings/
+│   │   ├── 04_sorting_buffer/
+│   │   ├── 05_pointers_files/
+│   │   ├── 06_modular_libs/
+│   │   ├── 07_multi_lib/
+│   │   ├── 08_vpointer/
+│   │   ├── 09_state_machines/
+│   │   └── TPN1/
+│   └── UCA-Micros-II/
+│       └── state_machines/    switch-case vs table-driven
 │
-├── STM32F401RE/        Proyectos STM32CubeIDE para Nucleo-F401RE (ITBA)
+├── STM32F401RE/               Proyectos CubeIDE para Nucleo-F401RE (ITBA)
+│   ├── button_led/
+│   ├── Blinky_CleanCode/
+│   ├── Button_PWM/
+│   ├── DeBounce/
+│   ├── ADC_Test/
+│   ├── FIR/
+│   ├── button_clicks/
+│   ├── USART_Polling/
+│   └── USART_RxIT/
 │
-├── STM32C031C6/        Proyectos STM32CubeIDE para Nucleo-C031C6 (UCA)
+├── STM32C031C6/               Proyectos CubeIDE para Nucleo-C031C6 (UCA)
+│   ├── first_program/
+│   ├── tim_pwm_project/
+│   ├── tim_debounce/
+│   ├── UART_Polling/
+│   ├── analog_pwm/            DAC sintetizado por PWM (incluye gen_signal.py)
+│   └── vfd_pwm/               Control de VFD por PWM (incluye vfd_helper.py)
 │
-├── DSP/                Prototipos Python de algoritmos DSP
-│   ├── Convolution/    Convolución (zero-pad, buffer limitado)
-│   ├── FIR_IIR/        Filtros FIR e IIR
-│   └── Windowing/      Ventanas (Hamming, Hanning, Blackman, etc.)
+├── DSP/                       Prototipos Python de algoritmos DSP
+│   ├── Convolution/           zero_pad, buffer limitado, my_convolution
+│   ├── FIR_IIR/               Filtros FIR e IIR
+│   └── Windowing/             Hamming, Hanning, Blackman, Bartlett, …
 │
-├── Comunicación Serie.pptx
-└── Maquinas de Estado.pptx
+├── doc/                       Presentaciones de soporte
+│   ├── Comunicación Serie.pptx
+│   └── Maquinas de Estado.pptx
+│
+├── ABOUT.md
+└── README.md
 ```
-
-Las carpetas con prefijo `AAAAMMDD-` indican la fecha de clase, lo que permite seguir el dictado en orden cronológico.
 
 ---
 
@@ -59,17 +87,17 @@ Las carpetas con prefijo `AAAAMMDD-` indican la fecha de clase, lo que permite s
 
 Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-F401RE** (Cortex-M4F @ 84 MHz).
 
-| Fecha     | Proyecto              | Tema                                         |
-|-----------|-----------------------|----------------------------------------------|
-| 20260415  | `button_led`          | GPIO básico: lectura de pulsador y LED       |
-| 20260420  | `Blinky_CleanCode`    | Blinky aplicando *clean code*                |
-| 20260420  | `Button_PWM`          | PWM controlado por pulsador                  |
-| 20260422  | `DeBounce`            | Antirrebote por software                     |
-| 20260427  | `ADC_Test`            | Lectura analógica con ADC                    |
-| 20260427  | `FIR`                 | Filtro FIR sobre muestras del ADC            |
-| 20260502  | `button_clicks`       | Detección de clicks simples / dobles / largos|
-| 20260506  | `USART_Polling`       | UART por polling                             |
-| 20260506  | `USART_RxIT`          | UART por interrupción (RX-IT)                |
+| Proyecto              | Tema                                            |
+|-----------------------|-------------------------------------------------|
+| `button_led`          | GPIO básico: lectura de pulsador y LED          |
+| `Blinky_CleanCode`    | Blinky aplicando *clean code*                   |
+| `Button_PWM`          | PWM controlado por pulsador                    |
+| `DeBounce`            | Antirrebote por software                        |
+| `ADC_Test`            | Lectura analógica con ADC                       |
+| `FIR`                 | Filtro FIR sobre muestras del ADC               |
+| `button_clicks`       | Detección de clicks simples / dobles / largos   |
+| `USART_Polling`       | UART por polling                                |
+| `USART_RxIT`          | UART por interrupción (RX-IT)                   |
 
 ---
 
@@ -77,16 +105,14 @@ Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-F401RE*
 
 Generados con **STM32CubeMX / STM32CubeIDE**, HAL de ST. Board: **Nucleo-C031C6** (Cortex-M0+ @ 48 MHz).
 
-| Fecha     | Proyecto              | Tema                                                      |
-|-----------|-----------------------|-----------------------------------------------------------|
-| 20260409  | `first_program`       | Primer proyecto: setup, clocks, GPIO                      |
-| 20260423  | `tim_pwm_project`     | Generación de PWM con TIMx                                |
-| 20260429  | `tim_debounce`        | Antirrebote por timer                                     |
-| 20260507  | `UART_Polling`        | UART por polling                                          |
-| 20260514  | `analog_pwm`          | DAC sintetizado por PWM + filtro RC (`gen_signal.py`)     |
-| 20260520  | `vfd_pwm`             | Control de Variable Frequency Drive por PWM (`vfd_helper.py`) |
-
-Las carpetas que incluyen scripts `.py` contienen utilidades de generación / análisis de señales para acompañar el proyecto en C.
+| Proyecto              | Tema                                                          |
+|-----------------------|---------------------------------------------------------------|
+| `first_program`       | Primer proyecto: setup, clocks, GPIO                          |
+| `tim_pwm_project`     | Generación de PWM con TIMx                                    |
+| `tim_debounce`        | Antirrebote por timer                                         |
+| `UART_Polling`        | UART por polling                                              |
+| `analog_pwm`          | DAC sintetizado por PWM + filtro RC (`gen_signal.py`)         |
+| `vfd_pwm`             | Control de Variable Frequency Drive por PWM (`vfd_helper.py`) |
 
 ---
 
@@ -112,7 +138,7 @@ Requisitos típicos: `numpy`, `matplotlib`, `scipy`.
 
 ---
 
-## Material de soporte
+## Material de soporte (`doc/`)
 
 - `Comunicación Serie.pptx` — fundamentos de UART/USART y ejemplos.
 - `Maquinas de Estado.pptx` — `switch-case` vs *table-driven*.
@@ -121,6 +147,6 @@ Requisitos típicos: `numpy`, `matplotlib`, `scipy`.
 
 ## Autor
 
-**Ing. Maximiliano Vega**  
-Docente de Microcontroladores — ITBA · UCA  
+**Ing. Maximiliano Vega**
+Docente de Microcontroladores — ITBA · UCA
 GitHub: [@Maximiliano0](https://github.com/Maximiliano0)
